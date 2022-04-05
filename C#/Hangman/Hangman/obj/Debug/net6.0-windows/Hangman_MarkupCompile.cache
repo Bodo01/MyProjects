@@ -1,0 +1,20 @@
+﻿Hangman
+
+
+winexe
+C#
+.cs
+D:\Proiecte WPF\Hangman\Hangman\obj\Debug\net6.0-windows\
+Hangman
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+D:\Proiecte WPF\Hangman\Hangman\App.xaml
+4707300094
+
+15-1042231482
+204-1935515120
+MainWindow.xaml;Views\GameWindow.xaml;Views\Login.xaml;Views\NewUserView.xaml;
+
+False
+

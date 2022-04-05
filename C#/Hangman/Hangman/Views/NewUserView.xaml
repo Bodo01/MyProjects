@@ -1,0 +1,24 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hangman.Views"
+        xmlns:ViewModels="clr-namespace:Hangman.ViewModels" x:Class="Hangman.Views.NewUserView"
+        mc:Ignorable="d"
+        Title="NewUserView" Height="200" Width="700"
+        Background="Black"
+        >
+    <Window.DataContext>
+        <ViewModels:NewUserViewModel/>
+    </Window.DataContext>
+    <StackPanel Orientation="Horizontal">
+        <Label Foreground="White" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Username:"/>
+        <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Width="250" Height="30" Background="Yellow"/>
+        <Button Command="{Binding Path=PreviousPhoto}" Foreground="White" Background="Black" Margin="10" Height="20" Width="20" Content="&lt;"/>
+        <Image Source="{Binding SelectedPhotostr, UpdateSourceTrigger=PropertyChanged}" Width="180"/>
+        <Button Command="{Binding Path=NextPhoto}" Foreground="White" Background="Black" Margin="10" Height="20" Width="20" Content="&gt;"/>
+
+        <Button Command="{Binding Path=CreateUser}"  Width="65" Height="50" Background="Black" Foreground="White" Content="Create new&#xA;     user"  Margin="10,10,10,10"/>
+    </StackPanel>
+</Window>

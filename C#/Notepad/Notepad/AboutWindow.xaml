@@ -1,0 +1,14 @@
+﻿<Window x:Class="Notepad.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notepad"
+        mc:Ignorable="d"
+        Title="Window1" Height="210" Width="400">
+    <Grid>
+        <Label Content="Autorul proiectului:Radu Marius-Bogdan&#xA;Grupa:10LF203&#xD;&#xA;E-mail institutional: marius-bogdan.radu@student.unitbv.ro&#xA;&#xA;" HorizontalAlignment="Center" VerticalAlignment="Center" Height="70" Width="338"/>
+        <Button Click="butonEmail" Content="E-mail" HorizontalAlignment="Center" Margin="0,147,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

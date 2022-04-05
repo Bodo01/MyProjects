@@ -1,0 +1,22 @@
+﻿<Window x:Class="Notepad.findWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notepad"
+        mc:Ignorable="d"
+        Title="findWindow" Height="450" Width="800">
+    <Grid>
+        <RichTextBox x:Name="richText" Margin="0,35,0,0" >
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Content="Replace all" HorizontalAlignment="Left" Margin="284,9,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBox x:Name="replaceWord" HorizontalAlignment="Left" Margin="153,9,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Insert a string to replace:" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,2 @@
+D:\Twitter\Server\x64\Debug\Server.vcxproj.AssemblyReference.cache
+D:\Twitter\Server\x64\Debug\Server.vcxproj.SuggestedBindingRedirects.cache
