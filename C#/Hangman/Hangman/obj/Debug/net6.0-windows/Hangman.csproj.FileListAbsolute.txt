@@ -27,4 +27,12 @@ D:\Proiecte WPF\Hangman\Hangman\obj\Debug\net6.0-windows\Views\NewUserView.g.cs
 D:\Proiecte WPF\Hangman\Hangman\obj\Debug\net6.0-windows\Views\NewUserView.baml
 D:\Proiecte WPF\Hangman\Hangman\obj\Debug\net6.0-windows\Views\GameWindow.g.cs
 D:\Proiecte WPF\Hangman\Hangman\obj\Debug\net6.0-windows\Views\GameWindow.baml
+D:\Proiecte WPF\Hangman\Hangman\obj\Debug\net6.0-windows\Views\LoadGame.g.cs
+D:\Proiecte WPF\Hangman\Hangman\obj\Debug\net6.0-windows\Views\LoadGame.baml
+D:\Proiecte WPF\Hangman\Hangman\bin\Debug\net6.0-windows\GalaSoft.MvvmLight.Extras.dll
+D:\Proiecte WPF\Hangman\Hangman\bin\Debug\net6.0-windows\GalaSoft.MvvmLight.Platform.dll
+D:\Proiecte WPF\Hangman\Hangman\bin\Debug\net6.0-windows\GalaSoft.MvvmLight.dll
+D:\Proiecte WPF\Hangman\Hangman\bin\Debug\net6.0-windows\System.Windows.Interactivity.dll
+D:\Proiecte WPF\Hangman\Hangman\obj\Debug\net6.0-windows\Views\StatisticsView.g.cs
+D:\Proiecte WPF\Hangman\Hangman\obj\Debug\net6.0-windows\Views\StatisticsView.baml
 D:\Proiecte WPF\Hangman\Hangman\obj\Debug\net6.0-windows\Hangman.csproj.AssemblyReference.cache

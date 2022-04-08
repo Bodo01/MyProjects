@@ -23,6 +23,8 @@ namespace Hangman
     {
         public MainWindow()
         {
+            GLOBALS.loadGameIndex = -1;
+
             InitializeComponent();
             Login login = new Login();
             login.Show();

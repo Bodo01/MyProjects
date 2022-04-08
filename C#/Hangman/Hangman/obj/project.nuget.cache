@@ -1,11 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "RjXLjF2Q2BOtMKR+NVLLdcssgt/v7cxlnhSCGAMYWOcpuv11am4T4tKyQQ7ktZBybNmmy10c/MhdBgHeSPpaAA==",
+  "dgSpecHash": "JtYutNAZDnxO1xdhuS3UgqphsGJdmezcheRxcU7uDnwgnL9EotsY9yOE3gpB2qu/pZrdIz4Qeds/8xPMPlZyNg==",
   "success": true,
   "projectFilePath": "D:\\Proiecte WPF\\Hangman\\Hangman\\Hangman.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\radub\\.nuget\\packages\\mvvmlightlibs\\5.4.1.1\\mvvmlightlibs.5.4.1.1.nupkg.sha512",
     "C:\\Users\\radub\\.nuget\\packages\\npgsql\\6.0.3\\npgsql.6.0.3.nupkg.sha512",
     "C:\\Users\\radub\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MvvmLightLibs 5.4.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MvvmLightLibs",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

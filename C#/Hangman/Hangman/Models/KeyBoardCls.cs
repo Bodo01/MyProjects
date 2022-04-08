@@ -133,6 +133,37 @@ namespace Hangman.Models
             ButtonM.IsEnabled = true;
         }
 
+        public void ResetKeysFalse()
+        {
+            ButtonQ.IsEnabled = false;
+            ButtonW.IsEnabled = false;
+            ButtonE.IsEnabled = false;
+            ButtonR.IsEnabled = false;
+            ButtonT.IsEnabled = false;
+            ButtonY.IsEnabled = false;
+            ButtonU.IsEnabled = false;
+            ButtonI.IsEnabled = false;
+            ButtonO.IsEnabled = false;
+            ButtonP.IsEnabled = false;
+            ButtonA.IsEnabled = false;
+            ButtonS.IsEnabled = false;
+            ButtonD.IsEnabled = false;
+            ButtonF.IsEnabled = false;
+            ButtonG.IsEnabled = false;
+            ButtonH.IsEnabled = false;
+            ButtonJ.IsEnabled = false;
+            ButtonK.IsEnabled = false;
+            ButtonL.IsEnabled = false;
+            ButtonZ.IsEnabled = false;
+            ButtonX.IsEnabled = false;
+            ButtonC.IsEnabled = false;
+            ButtonV.IsEnabled = false;
+            ButtonB.IsEnabled = false;
+            ButtonN.IsEnabled = false;
+            ButtonM.IsEnabled = false;
+        }
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string propertyName)

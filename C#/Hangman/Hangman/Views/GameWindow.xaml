@@ -10,49 +10,65 @@
 
         <Menu  VerticalAlignment="Top">
             <MenuItem Header="File">
-                <MenuItem Header="New Game"/>
-                <MenuItem Header="Open Game"/>
-                <MenuItem Header="Save Game"/>
-                <MenuItem Header="Statistics"/>
+                <MenuItem Header="New Game" Command="{Binding Path=NewGame}"/>
+                <MenuItem Header="Open Game" Command="{Binding Path=OpenGame}"/>
+                <MenuItem Header="Save Game" Command="{Binding Path=SaveGame}"/>
                 <MenuItem Header="Exit"/>
 
             </MenuItem>
-            <MenuItem Header="Categories" >
-                <MenuItem Header="All Categories" IsCheckable="True"/>
+            <MenuItem Header="Categories" IsEnabled="{Binding CategoryEnable}" ItemsSource="{Binding Path=Categories, UpdateSourceTrigger=PropertyChanged}">
+                <!--<MenuItem Header="All Categories" IsCheckable="True"/>
                 <MenuItem Header="Movies" IsCheckable="True"/>
                 <MenuItem Header="Celebrities" IsCheckable="True"/>
-                <MenuItem Header="Mountains" IsCheckable="True"/>
+                <MenuItem Header="Mountains" IsCheckable="True"/>-->
+
+                <MenuItem.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <MenuItem Header="{Binding CategoryName}" IsCheckable="True" IsChecked="{Binding IsChecked}"></MenuItem>
+                    </DataTemplate>
+
+                </MenuItem.ItemTemplate>
+
 
             </MenuItem>
             <MenuItem Header="Help"/>
 
         </Menu>
-        <Button Command="{Binding Path=DisableButtonQ}"  IsEnabled="{Binding KeyBoardCl.ButtonQ.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="Q" HorizontalAlignment="Left" Margin="489,174,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonW}"  IsEnabled="{Binding KeyBoardCl.ButtonW.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="W" HorizontalAlignment="Left" Margin="545,174,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonE}"  IsEnabled="{Binding KeyBoardCl.ButtonE.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="E" HorizontalAlignment="Left" Margin="600,174,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonR}"  IsEnabled="{Binding KeyBoardCl.ButtonR.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="R" HorizontalAlignment="Left" Margin="654,174,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonT}"  IsEnabled="{Binding KeyBoardCl.ButtonT.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="T" HorizontalAlignment="Left" Margin="709,174,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonY}"  IsEnabled="{Binding KeyBoardCl.ButtonY.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="Y" HorizontalAlignment="Left" Margin="763,174,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonU}"  IsEnabled="{Binding KeyBoardCl.ButtonU.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="U" HorizontalAlignment="Left" Margin="817,174,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonI}"  IsEnabled="{Binding KeyBoardCl.ButtonI.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="I" HorizontalAlignment="Left" Margin="875,174,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonO}"  IsEnabled="{Binding KeyBoardCl.ButtonO.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="O" HorizontalAlignment="Left" Margin="933,174,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonP}"  IsEnabled="{Binding KeyBoardCl.ButtonP.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="P" HorizontalAlignment="Left" Margin="991,174,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonA}"  IsEnabled="{Binding KeyBoardCl.ButtonA.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="A" HorizontalAlignment="Left" Margin="511,225,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonS}"  IsEnabled="{Binding KeyBoardCl.ButtonS.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="S" HorizontalAlignment="Left" Margin="567,225,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonD}"  IsEnabled="{Binding KeyBoardCl.ButtonD.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="D" HorizontalAlignment="Left" Margin="622,225,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonF}"  IsEnabled="{Binding KeyBoardCl.ButtonF.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="F" HorizontalAlignment="Left" Margin="676,225,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonG}"  IsEnabled="{Binding KeyBoardCl.ButtonG.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="G" HorizontalAlignment="Left" Margin="731,225,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonH}"  IsEnabled="{Binding KeyBoardCl.ButtonH.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="H" HorizontalAlignment="Left" Margin="785,225,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonJ}"  IsEnabled="{Binding KeyBoardCl.ButtonJ.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="J" HorizontalAlignment="Left" Margin="839,225,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonK}"  IsEnabled="{Binding KeyBoardCl.ButtonK.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="K" HorizontalAlignment="Left" Margin="897,225,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonL}"  IsEnabled="{Binding KeyBoardCl.ButtonL.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="L" HorizontalAlignment="Left" Margin="955,225,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonZ}"  IsEnabled="{Binding KeyBoardCl.ButtonZ.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="Z" HorizontalAlignment="Left" Margin="533,276,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonX}"  IsEnabled="{Binding KeyBoardCl.ButtonX.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="X" HorizontalAlignment="Left" Margin="589,276,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonC}"  IsEnabled="{Binding KeyBoardCl.ButtonC.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="C" HorizontalAlignment="Left" Margin="644,276,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonV}"  IsEnabled="{Binding KeyBoardCl.ButtonV.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="V" HorizontalAlignment="Left" Margin="698,276,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonB}"  IsEnabled="{Binding KeyBoardCl.ButtonB.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="B" HorizontalAlignment="Left" Margin="753,276,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonN}"  IsEnabled="{Binding KeyBoardCl.ButtonN.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="N" HorizontalAlignment="Left" Margin="807,276,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
-        <Button Command="{Binding Path=DisableButtonM}"  IsEnabled="{Binding KeyBoardCl.ButtonM.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="M" HorizontalAlignment="Left" Margin="861,276,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonQ}"  IsEnabled="{Binding KeyBoardCl.ButtonQ.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="Q" HorizontalAlignment="Left" Margin="556,0,0,0" VerticalAlignment="Center" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonW}"  IsEnabled="{Binding KeyBoardCl.ButtonW.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="W" HorizontalAlignment="Left" Margin="612,0,0,0" VerticalAlignment="Center" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonE}"  IsEnabled="{Binding KeyBoardCl.ButtonE.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="E" HorizontalAlignment="Left" Margin="667,0,0,0" VerticalAlignment="Center" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonR}"  IsEnabled="{Binding KeyBoardCl.ButtonR.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="R" HorizontalAlignment="Left" Margin="721,0,0,0" VerticalAlignment="Center" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonT}"  IsEnabled="{Binding KeyBoardCl.ButtonT.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="T" HorizontalAlignment="Left" Margin="776,0,0,0" VerticalAlignment="Center" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonY}"  IsEnabled="{Binding KeyBoardCl.ButtonY.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="Y" HorizontalAlignment="Left" Margin="830,0,0,0" VerticalAlignment="Center" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonU}"  IsEnabled="{Binding KeyBoardCl.ButtonU.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="U" HorizontalAlignment="Left" Margin="884,0,0,0" VerticalAlignment="Center" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonI}"  IsEnabled="{Binding KeyBoardCl.ButtonI.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="I" HorizontalAlignment="Left" Margin="942,0,0,0" VerticalAlignment="Center" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonO}"  IsEnabled="{Binding KeyBoardCl.ButtonO.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="O" HorizontalAlignment="Left" Margin="1000,0,0,0" VerticalAlignment="Center" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonP}"  IsEnabled="{Binding KeyBoardCl.ButtonP.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="P" HorizontalAlignment="Left" Margin="1058,0,0,0" VerticalAlignment="Center" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonA}"  IsEnabled="{Binding KeyBoardCl.ButtonA.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="A" HorizontalAlignment="Center" Margin="0,370,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonS}"  IsEnabled="{Binding KeyBoardCl.ButtonS.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="S" HorizontalAlignment="Left" Margin="634,370,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonD}"  IsEnabled="{Binding KeyBoardCl.ButtonD.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="D" HorizontalAlignment="Left" Margin="689,370,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonF}"  IsEnabled="{Binding KeyBoardCl.ButtonF.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="F" HorizontalAlignment="Left" Margin="743,370,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonG}"  IsEnabled="{Binding KeyBoardCl.ButtonG.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="G" HorizontalAlignment="Left" Margin="798,370,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonH}"  IsEnabled="{Binding KeyBoardCl.ButtonH.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="H" HorizontalAlignment="Left" Margin="852,370,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonJ}"  IsEnabled="{Binding KeyBoardCl.ButtonJ.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="J" HorizontalAlignment="Left" Margin="906,370,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonK}"  IsEnabled="{Binding KeyBoardCl.ButtonK.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="K" HorizontalAlignment="Left" Margin="964,370,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonL}"  IsEnabled="{Binding KeyBoardCl.ButtonL.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="L" HorizontalAlignment="Left" Margin="1022,370,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonZ}"  IsEnabled="{Binding KeyBoardCl.ButtonZ.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="Z" HorizontalAlignment="Left" Margin="600,421,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonX}"  IsEnabled="{Binding KeyBoardCl.ButtonX.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="X" HorizontalAlignment="Left" Margin="656,421,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonC}"  IsEnabled="{Binding KeyBoardCl.ButtonC.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="C" HorizontalAlignment="Left" Margin="711,421,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonV}"  IsEnabled="{Binding KeyBoardCl.ButtonV.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="V" HorizontalAlignment="Left" Margin="765,421,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonB}"  IsEnabled="{Binding KeyBoardCl.ButtonB.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="B" HorizontalAlignment="Left" Margin="820,421,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonN}"  IsEnabled="{Binding KeyBoardCl.ButtonN.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="N" HorizontalAlignment="Left" Margin="874,421,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Button Command="{Binding Path=DisableButtonM}"  IsEnabled="{Binding KeyBoardCl.ButtonM.IsEnabled, UpdateSourceTrigger=PropertyChanged}" Content="M" HorizontalAlignment="Left" Margin="928,421,0,0" VerticalAlignment="Top" Width="44" Height="46" FontWeight="Bold" Background="#FFFAFD00" FontSize="24" />
+        <Label FontSize="40" Content="Category:" HorizontalAlignment="Left" Margin="10,527,0,0" VerticalAlignment="Top" Height="61" Width="191" FontWeight="Bold" FontFamily="Cambria"/>
+        <Label FontSize="40" Content="{Binding CurrentCategories}" HorizontalAlignment="Left" Margin="206,527,0,0" VerticalAlignment="Top" Height="61" Width="967" FontWeight="Bold" FontFamily="Cambria"/>
+        <Image Source="{Binding GamePhaseImage, UpdateSourceTrigger=PropertyChanged}" Margin="0,46,774,217" Stretch="Fill"/>
+        <Label FontSize="40" Content="Word:" HorizontalAlignment="Left" Margin="10,613,0,0" VerticalAlignment="Top" Height="61" Width="130" FontWeight="Bold" FontFamily="Cambria"/>
+        <Label FontSize="40" Content="{Binding CurrentGame.GuessedWord, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="148,613,0,0" VerticalAlignment="Top" Height="61" Width="932" FontWeight="Bold" FontFamily="Bahnschrift"/>
+        <Label FontSize="30" Content="Current level:" HorizontalAlignment="Left" Margin="436,23,0,0" VerticalAlignment="Top" Height="61" Width="208" FontWeight="Bold" FontFamily="Cambria"/>
+        <Label FontSize="30" Content="{Binding CurrentGame.Level, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="644,23,0,0" VerticalAlignment="Top" Height="61" Width="67" FontWeight="Bold" FontFamily="Cambria"/>
 
 
     </Grid>

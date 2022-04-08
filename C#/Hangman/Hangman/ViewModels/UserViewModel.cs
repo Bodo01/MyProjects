@@ -40,7 +40,7 @@ namespace Hangman.ViewModels
             {
                 DatabaseConnection db = new DatabaseConnection();
 
-                db.DeleteUserByName(Users[SelectedUser].Name);
+                db.DeleteUserByName(Users[SelectedUser]);
 
                 Users.Remove(Users[SelectedUser]);
                 SelectedUser = 0;
@@ -65,10 +65,26 @@ namespace Hangman.ViewModels
 
         }
 
+        public void StatsFunc(object parameter)
+        {
+            StatisticsView statistics = new StatisticsView();
+            statistics.DataContext = new StatisticsViewModel();
+
+            statistics.Show();
+
+        }
+
         private ICommand m_newUser;
         private ICommand m_refresh;
         private ICommand m_deleteUser;
         private ICommand m_play;
+        private ICommand m_stats;
+
+        public ICommand Stats
+        {
+            get { m_stats = new RelayCommand(StatsFunc); return m_stats; }
+
+        }
 
         public ICommand Play 
         {

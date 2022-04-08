@@ -63,7 +63,7 @@ namespace Hangman.Models
 
         public int Id
         {
-            private get { return _id; }
+            get { return _id; }
             set { _id = value; }
         
         }

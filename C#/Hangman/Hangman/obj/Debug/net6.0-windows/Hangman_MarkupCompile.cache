@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\Proiecte WPF\Hangman\Hangman\App.xaml
-4707300094
+6-984044421
 
-15-1042231482
-204-1935515120
-MainWindow.xaml;Views\GameWindow.xaml;Views\Login.xaml;Views\NewUserView.xaml;
+23422945605
+208-1989868600
+MainWindow.xaml;Views\GameWindow.xaml;Views\LoadGame.xaml;Views\Login.xaml;Views\NewUserView.xaml;Views\StatisticsView.xaml;
 
 False
 

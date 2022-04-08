@@ -35,8 +35,9 @@
         <Button Content="New User" Command="{Binding Path=NewUser}" HorizontalAlignment="Left" Margin="12,0,0,10" VerticalAlignment="Bottom" Width="97" Height="29"/>
         <Button Command="{Binding Path=DeleteUser}"  Content="Delete User" HorizontalAlignment="Left" Margin="121,0,0,10" VerticalAlignment="Bottom"  Width="97" Height="29"/>
         <Button Command="{Binding Refresh}" Content="Refresh" HorizontalAlignment="Left" Margin="174,0,0,50" VerticalAlignment="Bottom" />
-        <Image HorizontalAlignment="Right" VerticalAlignment="Top" Width="570" Height="350" Source="D:\Proiecte WPF\Hangman\Hangman\Pictures\hangman.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Right" VerticalAlignment="Top" Width="560" Height="350" Source="D:\Proiecte WPF\Hangman\Hangman\Pictures\hangman.png" Stretch="Fill"/>
         <Button Command="{Binding Path=Play}" VerticalAlignment="Bottom" Content="PLAY" Foreground="White" Background="Black" HorizontalAlignment="Left" Margin="449,0,20,10" Width="117" Height="29"/>
+        <Button Command="{Binding Path=Stats}" Content="View Statistics" HorizontalAlignment="Left" Margin="240,0,0,10"  VerticalAlignment="Bottom" Height="29" Width="106"/>
 
 
     </Grid>
