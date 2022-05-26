@@ -1,0 +1,155 @@
+CREATE TABLE Users(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+username VARCHAR(30),
+pass_word VARCHAR(30),
+name VARCHAR(30),
+email VARCHAR(30),
+phone_number VARCHAR(30),
+user_type INT,
+deleted BIT,
+
+);
+
+CREATE TABLE Rooms(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+number int,
+room_type VARCHAR(30),
+deleted BIT,
+
+);
+
+CREATE TABLE Images(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+image_path VARCHAR(30),
+deleted BIT,
+
+);
+
+CREATE TABLE Facilities(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+name VARCHAR(30),
+
+
+deleted BIT,
+
+);
+CREATE TABLE HotelServices(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+name VARCHAR(30),
+
+deleted BIT,
+
+);
+CREATE TABLE ExtraOptions(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+name VARCHAR(30),
+price FLOAT,
+
+deleted BIT,
+
+);
+
+CREATE TABLE RoomTypes(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+name VARCHAR(30),
+
+
+
+deleted BIT,
+
+);
+CREATE TABLE RoomTypesImages(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+path VARCHAR(20),
+room_type_id INT FOREIGN KEY REFERENCES RoomTypes(id),
+
+
+deleted BIT,
+
+);
+ALTER TABLE Rooms
+DROP COLUMN room_type;
+ALTER TABLE Rooms
+ADD room_type INT;
+ALTER TABLE Rooms
+ADD CONSTRAINT fk_roomTypes
+ FOREIGN KEY (room_type)
+ REFERENCES RoomTypes(id)
+CREATE TABLE Reservations(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+client_id INT FOREIGN KEY REFERENCES Users(id),
+price FLOAT,
+start_date DATE,
+end_date DATE,
+status INT,
+
+
+deleted BIT,
+
+);
+CREATE TABLE ReservationRooms(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+reservation_id INT FOREIGN KEY REFERENCES Reservations(id),
+room_type INT FOREIGN KEY REFERENCES RoomTypes(id),
+quantity INT,
+
+
+
+deleted BIT,
+
+);
+CREATE TABLE ReservationOptions(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+reservation_id INT FOREIGN KEY REFERENCES Reservations(id),
+option_id INT FOREIGN KEY REFERENCES ExtraOptions(id),
+
+
+
+
+deleted BIT,
+
+);
+CREATE TABLE Packages(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+start_date DATE,
+end_date DATE,
+price FLOAT,
+room_type INT FOREIGN KEY REFERENCES RoomTypes(id),
+name VARCHAR(30),
+
+
+
+
+deleted BIT,
+
+);
+CREATE TABLE PackagesOptions(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+option_id INT FOREIGN KEY REFERENCES ExtraOptions(id),
+package_id INT FOREIGN KEY REFERENCES Packages(id),
+
+
+
+
+deleted BIT,
+
+);
+CREATE TABLE RoomPrices(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+room_type INT FOREIGN KEY REFERENCES RoomTypes(id),
+price FLOAT,
+start_date DATE,
+end_date DATE,
+
+
+deleted BIT,
+
+);
+CREATE TABLE RoomFacilities(
+id INT IDENTITY(1, 1) PRIMARY KEY,
+room_types INT FOREIGN KEY REFERENCES RoomTypes(id),
+facility_id INT FOREIGN KEY REFERENCES Facilities(id),
+
+deleted BIT,
+
+);

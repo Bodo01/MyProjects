@@ -1,0 +1,21 @@
+﻿<Window x:Class="Hotel.Views.RoomView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hotel.Views"
+        mc:Ignorable="d"
+        Title="RoomView" Height="600" Width="1000">
+    
+    <Grid>
+        
+        <local:RoomControl DataContext="{Binding Enhanced}" Margin="106,-10,118,67"></local:RoomControl>
+        <Button Command="{Binding NextRoom}" Content="Next room" HorizontalAlignment="Left" Margin="887,207,0,0" VerticalAlignment="Top" Height="47" Width="103"/>
+        <Button Command="{Binding PrevRoom}" Content="Previous room" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" Height="47" Width="91"/>
+        <Button Visibility="{Binding AdminMode}" Command="{Binding NewRoom}" Content="    Add new&#xA;room type" HorizontalAlignment="Left" Margin="618,516,0,0" VerticalAlignment="Top" Height="38" Width="103"/>
+        <Label Visibility="{Binding AdminMode}" Content="New room type name" HorizontalAlignment="Left" Margin="726,522,0,0" VerticalAlignment="Top"/>
+        <TextBox Visibility="{Binding AdminMode}"  HorizontalAlignment="Left" Margin="856,526,0,0" TextWrapping="Wrap" Text="{Binding NewRoomName}" VerticalAlignment="Top" Width="134"/>
+        <Button Command="{Binding ModifyRoom}" Visibility="{Binding AdminMode}" Content="     Modify &#xA;current room&#xA;type" HorizontalAlignment="Left" Margin="902,383,0,0" VerticalAlignment="Top" Height="63" Width="73"/>
+        <Button  Visibility="{Binding AdminMode}" Command="{Binding DeleteRoom}" Content="Delete current room type" HorizontalAlignment="Left" Margin="381,512,0,0" VerticalAlignment="Top" Height="38" Width="145"/>
+    </Grid>
+</Window>
